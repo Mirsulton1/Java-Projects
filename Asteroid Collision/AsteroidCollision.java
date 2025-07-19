@@ -6,6 +6,7 @@ class Solution{
 
         for (int asteroid : asteroids){
             boolean destroyed = false;
+            
 
             // While stack is not empty, and collision might happen
             while (!stack.isEmpty() && asteroid < 0 && stack.peek() > 0){
