@@ -1,25 +1,25 @@
+import static org.junit.Assert.*;
 import org.junit.Test;
-import static org.junit.Assert.assertArrayEquals;
 
-public class UnitTests {
+public class SingleNumberTest {
 
     @Test
-    public void test1() {
-        assertArrayEquals(new int[]{0, 1, 1}, SingleNumber.countBits(2));
+    public void testExample1() {
+        assertEquals(1, SingleNumber.singleNumber(new int[]{2, 2, 1}));
     }
 
     @Test
-    public void test2() {
-        assertArrayEquals(new int[]{0, 1, 1, 2, 1, 2}, SingleNumber.countBits(5));
+    public void testExample2() {
+        assertEquals(4, SingleNumber.singleNumber(new int[]{4, 1, 2, 1, 2}));
     }
 
     @Test
-    public void test3() {
-        assertArrayEquals(new int[]{0}, SingleNumber.countBits(0));
+    public void testSingleElement() {
+        assertEquals(1, SingleNumber.singleNumber(new int[]{1}));
     }
 
     @Test
-    public void test4() {
-        assertArrayEquals(new int[]{0, 1}, SingleNumber.countBits(1));
+    public void testNegativeNumbers() {
+        assertEquals(-3, SingleNumber.singleNumber(new int[]{-1, -1, -3}));
     }
 }
